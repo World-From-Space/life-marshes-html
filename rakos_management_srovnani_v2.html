@@ -1,0 +1,78 @@
+
+<style>
+  * { box-sizing: border-box; }
+  .wrap { padding: 1rem 0; font-family: 'Neue Haas Unica', 'Helvetica Neue', Arial, sans-serif; color: #36444f; }
+  .section-label { font-size: 13px; color: #1a5e7a; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; font-weight: 500; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.5rem; }
+  @media (max-width: 480px) { .cards { grid-template-columns: 1fr; } .timeline { flex-direction: column; } .phase { border-right: 0.5px solid; border-bottom: none; border-radius: 0 !important; } .phase:first-child { border-radius: var(--border-radius-md) var(--border-radius-md) 0 0 !important; } .phase:last-child { border-bottom: 0.5px solid; border-radius: 0 0 var(--border-radius-md) var(--border-radius-md) !important; } }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .card-title { font-size: 16px; font-weight: 500; color: #1a5e7a; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .card-sub { font-size: 13px; color: #36444f; opacity: 0.7; margin-bottom: 12px; }
+  .tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 99px; margin-bottom: 10px; }
+  .tag-green { background: #EAF3DE; color: #3B6D11; }
+  .tag-amber { background: #FAEEDA; color: #854F0B; }
+  .item { display: flex; gap: 8px; font-size: 14px; color: #36444f; margin-bottom: 6px; line-height: 1.5; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+  .dot-green { background: #29bf28; }
+  .dot-amber { background: #e8820c; }
+  .dot-red { background: #e83b2a; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.25rem 0; }
+  .timeline { display: flex; gap: 0; margin-bottom: 1rem; }
+  .phase { flex: 1; padding: 10px 12px; font-size: 13px; border: 0.5px solid; border-right: none; }
+  .phase:first-child { border-radius: var(--border-radius-md) 0 0 var(--border-radius-md); }
+  .phase:last-child { border-right: 0.5px solid; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; }
+  .phase-label { font-weight: 500; font-size: 12px; }
+  .phase-val { font-size: 14px; font-weight: 500; margin-top: 2px; }
+  .phase-desc { font-size: 12px; margin-top: 3px; }
+  .note { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 14px; color: #36444f; line-height: 1.6; }
+</style>
+<div class="wrap">
+  <p class="section-label">Věkové fáze rákosiny a jejich hodnota</p>
+  <div class="timeline">
+    <div class="phase" style="background:#e8f7e8; border-color:#29bf28;">
+      <div class="phase-label" style="color:#1a6e1a;">Fáze 1 — 0–5 let</div>
+      <div class="phase-val" style="color:#29bf28;">Vysoká hodnota</div>
+      <div class="phase-desc" style="color:#1a6e1a;">hnízdní habitat, prostupnost, světlo</div>
+    </div>
+    <div class="phase" style="background:#fdf0e0; border-color:#e8820c;">
+      <div class="phase-label" style="color:#8a4d07;">Fáze 2 — 5–10 let</div>
+      <div class="phase-val" style="color:#e8820c;">Klesající hodnota</div>
+      <div class="phase-desc" style="color:#8a4d07;">zhušťování, stařina, uzavírání</div>
+    </div>
+    <div class="phase" style="background:#fdecea; border-color:#e83b2a;">
+      <div class="phase-label" style="color:#8a1a10;">Fáze 3 — 10+ let</div>
+      <div class="phase-val" style="color:#e83b2a;">Expanzivní fáze</div>
+      <div class="phase-desc" style="color:#8a1a10;">zánik vodní plochy, monokultura</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <p class="section-label">Srovnání: pasený vs. kosený rákos</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-title"><i class="ti ti-paw" aria-hidden="true" style="font-size:18px;color:#29bf28;"></i>Pastvou obhospodařovaný rákos</div>
+      <div class="card-sub">dobytek, koně, vodní buvol</div>
+      <span class="tag tag-green">Ideální pro slaniska</span>
+      <div class="item"><span class="dot dot-green"></span><span>Selektivní spásání — vzniká mozaika výšek a hustot porostu</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Mechanické narušování bahnitého dna a půdní struktury</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Přirozený přísun živin (trus) podporuje makrofyta a bezobratlé</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Udržuje polootevřené plochy — klíčové pro pcháče krátkohlavého a halofilní vegetaci</span></div>
+      <div class="item"><span class="dot dot-amber"></span><span>Nutná kontrola intenzity — přepásání poškozuje okraje tůní</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="ti ti-cut" aria-hidden="true" style="font-size:18px;color:#e8820c;"></i>Sečením obhospodařovaný rákos</div>
+      <div class="card-sub">ruční nebo strojová seč, zimní seč</div>
+      <span class="tag tag-amber">Vhodné pro větší mokřady</span>
+      <div class="item"><span class="dot dot-green"></span><span>Odstraňuje stařinu a biomasu — snižuje zastínění a eutrofizaci</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Zimní seč (leden–únor) šetří hnízdiště a hibernující živočichy</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Umožňuje řízenou obnovu rákosin po plochách (mozaiková seč)</span></div>
+      <div class="item"><span class="dot dot-red"></span><span>Homogennější výsledek — méně strukturální diverzity než pastva</span></div>
+      <div class="item"><span class="dot dot-red"></span><span>Při letní seči riziko zničení hnízd a úkrytů mláďat</span></div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="note">
+    <strong style="color:#1a5e7a;font-weight:500;">Klíč úspěchu:</strong> Kombinace obou přístupů — mozaiková seč + extenzivní pastva — vytváří nejvyšší stanovištní heterogenitu a podporuje největší druhovou bohatost, zejména na slanisky s halofilní vegetací.
+  </div>
+</div>

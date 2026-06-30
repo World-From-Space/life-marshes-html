@@ -1,0 +1,74 @@
+
+<style>
+  .wrap { padding: 1.25rem 0; font-family: var(--font-sans); }
+  .section-label { font-size: 12px; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.5rem; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+  .card-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .card-sub { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 12px; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 99px; margin-bottom: 10px; }
+  .tag-green { background: #EAF3DE; color: #3B6D11; }
+  .tag-amber { background: #FAEEDA; color: #854F0B; }
+  .item { display: flex; gap: 8px; font-size: 13px; color: var(--color-text-secondary); margin-bottom: 6px; line-height: 1.5; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+  .dot-green { background: #639922; }
+  .dot-amber { background: #BA7517; }
+  .dot-red { background: #E24B4A; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.25rem 0; }
+  .timeline { display: flex; gap: 0; margin-bottom: 1rem; }
+  .phase { flex: 1; padding: 10px 12px; font-size: 12px; border-radius: 0; border: 0.5px solid var(--color-border-tertiary); border-right: none; }
+  .phase:first-child { border-radius: var(--border-radius-md) 0 0 var(--border-radius-md); }
+  .phase:last-child { border-right: 0.5px solid var(--color-border-tertiary); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; }
+  .phase-label { font-weight: 500; font-size: 11px; color: var(--color-text-secondary); }
+  .phase-val { font-size: 13px; font-weight: 500; margin-top: 2px; }
+</style>
+<div class="wrap">
+  <p class="section-label">Věkové fáze rákosiny a jejich hodnota</p>
+  <div class="timeline">
+    <div class="phase" style="background:#EAF3DE; border-color:#C0DD97;">
+      <div class="phase-label" style="color:#3B6D11;">Fáze 1 — 0–5 let</div>
+      <div class="phase-val" style="color:#27500A;">Vysoká hodnota</div>
+      <div style="font-size:11px;color:#3B6D11;margin-top:3px;">hnízdní habitat, prostupnost, světlo</div>
+    </div>
+    <div class="phase" style="background:#FAEEDA; border-color:#FAC775;">
+      <div class="phase-label" style="color:#854F0B;">Fáze 2 — 5–10 let</div>
+      <div class="phase-val" style="color:#633806;">Klesající hodnota</div>
+      <div style="font-size:11px;color:#854F0B;margin-top:3px;">zhušťování, stařina, uzavírání</div>
+    </div>
+    <div class="phase" style="background:#FCEBEB; border-color:#F7C1C1;">
+      <div class="phase-label" style="color:#A32D2D;">Fáze 3 — 10+ let</div>
+      <div class="phase-val" style="color:#791F1F;">Expanzivní fáze</div>
+      <div style="font-size:11px;color:#A32D2D;margin-top:3px;">zánik vodní plochy, monokultura</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <p class="section-label">Srovnání: pasený vs. kosený rákos</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-title"><i class="ti ti-paw" aria-hidden="true" style="font-size:18px;color:#639922;"></i>Pastvou obhospodařovaný rákos</div>
+      <div class="card-sub">dobytek, koně, vodní buvol</div>
+      <span class="tag tag-green">Ideální pro slaniska</span>
+      <div class="item"><span class="dot dot-green"></span><span>Selektivní spásání — vzniká mozaika výšek a hustot porostu</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Mechanické narušování bahnitého dna a půdní struktury</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Přirozený přísun živin (trus) podporuje makrofyta a bezobratlé</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Udržuje polootevřené plochy — klíčové pro pcháče krátkohlavého a halofilní vegetaci</span></div>
+      <div class="item"><span class="dot dot-amber"></span><span>Nutná kontrola intenzity — přepásání poškozuje okraje tůní</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title"><i class="ti ti-cut" aria-hidden="true" style="font-size:18px;color:#BA7517;"></i>Sečením obhospodařovaný rákos</div>
+      <div class="card-sub">ruční nebo strojová seč, zimní seč</div>
+      <span class="tag tag-amber">Vhodné pro větší mokřady</span>
+      <div class="item"><span class="dot dot-green"></span><span>Odstraňuje stařinu a biomasu — snižuje zastínění a eutrofizaci</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Zimní seč (leden–únor) šetří hnízdiště a hibernující živočichy</span></div>
+      <div class="item"><span class="dot dot-green"></span><span>Umožňuje řízenou obnovu rákosin po plochách (mozaiková seč)</span></div>
+      <div class="item"><span class="dot dot-red"></span><span>Homogennější výsledek — méně strukturální diverzity než pastva</span></div>
+      <div class="item"><span class="dot dot-red"></span><span>Při letní seči riziko zničení hnízd a úkrytů mláďat</span></div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;font-size:13px;color:var(--color-text-secondary);line-height:1.6;">
+    <strong style="color:var(--color-text-primary);font-weight:500;">Klíč úspěchu:</strong> Kombinace obou přístupů — mozaiková seč + extenzivní pastva — vytváří nejvyšší stanovištní heterogenitu a podporuje největší druhovou bohatost, zejména na slanisky s halofilní vegetací.
+  </div>
+</div>
